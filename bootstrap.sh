@@ -92,7 +92,7 @@ do_backup() {
         ret="$?"
         success "Your original vim configuration has been backed up."
         debug
-   fi
+    fi
 }
 
 sync_repo() {

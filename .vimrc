@@ -240,7 +240,7 @@
     set nowrap                      " Do not wrap long lines
     set autoindent                  " Indent at the same level of the previous line
     set shiftwidth=4                " Use indents of 4 spaces
-    set expandtab                   " Tabs are spaces, not tabs
+    "set expandtab                   " Tabs are spaces, not tabs
     set tabstop=4                   " An indentation every four columns
     set softtabstop=4               " Let backspace delete indent
     set nojoinspaces                " Prevents inserting two spaces after punctuation on a join (J)
@@ -585,6 +585,8 @@
             let NERDTreeMouseMode=2
             let NERDTreeShowHidden=1
             let NERDTreeKeepTreeInNewTab=1
+            let NERDTreeMinimaUI=1
+            let NERDTreeAutoDeleteBuffer=1
             let g:nerdtree_tabs_open_on_gui_startup=0
         endif
     " }
@@ -1028,7 +1030,7 @@
         if isdirectory(expand("~/.vim/bundle/vim-indent-guides/"))
             let g:indent_guides_start_level = 2
             let g:indent_guides_guide_size = 1
-            let g:indent_guides_enable_on_vim_startup = 1
+            let g:indent_guides_enable_on_vim_startup = 0
         endif
     " }
 
