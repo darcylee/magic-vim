@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-app_dir="$HOME/.magic-vim-3"
+app_dir="$HOME/.magic-vim"
 
 warn() {
     echo "$1" >&2
