@@ -1,21 +1,12 @@
-# magic-vim : darcylee's Vim config, base on [spf13-vim](https://github.com/spf13/spf13-vim).
+# magic-vim : darcylee's Vim config, base on [magic-vim](https://github.com/magic/magic-vim).
 
-                    __ _ _____              _
-         ___ _ __  / _/ |___ /      __   __(_)_ __ ___
-        / __| '_ \| |_| | |_ \ _____\ \ / /| | '_ ` _ \
-        \__ \ |_) |  _| |___) |_____|\ V / | | | | | | |
-        |___/ .__/|_| |_|____/        \_/  |_|_| |_| |_|
-            |_|
-
-spf13-vim is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
+magic-vim is a distribution of vim plugins and resources for Vim, Gvim and [MacVim].
 
 It is a good starting point for anyone intending to use VIM for development running equally well on Windows, Linux, \*nix and Mac.
 
 The distribution is completely customisable using a `~/.vimrc.local`, `~/.vimrc.bundles.local`, and `~/.vimrc.before.local` Vim RC files.
 
-![spf13-vim image][spf13-vim-img]
-
-Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, spf13-vim 3 uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
+Unlike traditional VIM plugin structure, which similar to UNIX throws all files into common directories, making updating or disabling plugins a real mess, magic-vim 3 uses the [Vundle] plugin management system to have a well organized vim directory (Similar to mac's app folders). Vundle also ensures that the latest versions of your plugins are installed and makes it easy to keep them up to date.
 
 Great care has been taken to ensure that each plugin plays nicely with others, and optional configuration has been provided for what we believe is the most efficient use.
 
@@ -27,13 +18,13 @@ To make all the plugins work, specifically [neocomplete](https://github.com/Shou
 
 ## Linux, \*nix, Mac OSX Installation
 
-The easiest way to install spf13-vim is to use our [automatic installer](https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install spf13-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
+The easiest way to install magic-vim is to use our [automatic installer](https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install magic-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
 
 *Requires Git 1.7+ and Vim 7.3+*
 
 ```bash
 
-    curl https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh -L > spf13-vim.sh && sh spf13-vim.sh
+    curl https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh -L > magic-vim.sh && sh magic-vim.sh
 ```
 
 If you have a bash-compatible shell you can run the script directly:
@@ -44,68 +35,7 @@ If you have a bash-compatible shell you can run the script directly:
 
 ## Installing on Windows
 
-On Windows and \*nix [Git] and [Curl] are required. Also, if you haven't done so already, you'll need to install [Vim].
-The quickest option to install all three dependencies ([Git], [Curl], [Vim] and [spf13-vim]) is via [Chocolatey] NuGet. After installing [Chocolatey], execute the following commands on the _command prompt_:
-
-    C:\> choco install spf13-vim
-
-_Note: The [spf13-vim package] will install Vim also!_
-
-If you want to install [msysgit], [Curl] and [spf13-vim] individually, follow the directions below.
-
-### Installing dependencies
-
-#### Install [Vim]
-
-After the installation of Vim you must add a new directory to your environment variables path to make it work with the script installation of spf13.
-
-Open Vim and write the following command, it will show the installed directory:
-
-    :echo $VIMRUNTIME
-    C:\Program Files (X86)\Vim\vim74
-
-Then you need to add it to your environment variable path. After that try execute `vim` within command prompt (press Win-R, type `cmd`, press Enter) and you’ll see the default vim page.
-
-#### Install [msysgit]
-
-After installation try running `git --version` within _command prompt_ (press Win-R,  type `cmd`, press Enter) to make sure all good:
-
-    C:\> git --version
-    git version 1.7.4.msysgit.0
-
-#### Setup [Curl]
-_Instructions blatently copied from vundle readme_
-Installing Curl on Windows is easy as [Curl] is bundled with [msysgit]!
-But before it can be used with [Vundle] it's required make `curl` run in _command prompt_.
-The easiest way is to create `curl.cmd` with [this content](https://gist.github.com/912993)
-
-    @rem Do not use "echo off" to not affect any child calls.
-    @setlocal
-
-    @rem Get the abolute path to the parent directory, which is assumed to be the
-    @rem Git installation root.
-    @for /F "delims=" %%I in ("%~dp0..") do @set git_install_root=%%~fI
-    @set PATH=%git_install_root%\bin;%git_install_root%\mingw\bin;%PATH%
-
-    @if not exist "%HOME%" @set HOME=%HOMEDRIVE%%HOMEPATH%
-    @if not exist "%HOME%" @set HOME=%USERPROFILE%
-
-    @curl.exe %*
-
-
-And copy it to `C:\Program Files\Git\cmd\curl.cmd`, assuming [msysgit] was installed to `c:\Program Files\Git`
-
-to verify all good, run:
-
-    C:\> curl --version
-    curl 7.21.1 (i686-pc-mingw32) libcurl/7.21.1 OpenSSL/0.9.8k zlib/1.2.3
-    Protocols: dict file ftp ftps http https imap imaps ldap ldaps pop3 pop3s rtsp smtp smtps telnet tftp
-    Features: Largefile NTLM SSL SSPI libz
-
-
-#### Installing spf13-vim on Windows
-
-The easiest way is to download and run the spf13-vim-windows-install.cmd file. Remember to run this file in **Administrator Mode** if you want the symlinks to be created successfully.
+flow upstream guide [magic-vim](https://github.com/magic/magic-vim)
 
 ## Updating to the latest version
 The simpliest (and safest) way to update is to simply rerun the installer. It will completely and non destructively upgrade to the latest version.
@@ -124,13 +54,7 @@ Alternatively you can manually perform the following steps. If anything has chan
     vim +BundleInstall! +BundleClean +q
 ```
 
-### Fork me on GitHub
-
-I'm always happy to take pull requests from others. A good number of people are already [contributors] to [spf13-vim]. Go ahead and fork me.
-
 # A highly optimized .vimrc config file
-
-![spf13-vimrc image][spf13-vimrc-img]
 
 The .vimrc file is suited to programming. It is extremely well organized and folds in sections.
 Each section is labeled and each option is commented.
@@ -163,28 +87,28 @@ For example, to override the default color schemes:
 ### Before File
 
 Create a `~/.vimrc.before.local` file to define any customizations
-that get loaded *before* the spf13-vim `.vimrc`.
+that get loaded *before* the magic-vim `.vimrc`.
 
 For example, to prevent autocd into a file directory:
 ```bash
-    echo let g:spf13_no_autochdir = 1 >> ~/.vimrc.before.local
+    echo let g:magic_no_autochdir = 1 >> ~/.vimrc.before.local
 ```
-For a list of available spf13-vim specific customization options, look at the `~/.vimrc.before` file.
+For a list of available magic-vim specific customization options, look at the `~/.vimrc.before` file.
 
 
 ### Fork Customization
 
 There is an additional tier of customization available to those who want to maintain a
-fork of spf13-vim specialized for a particular group. These users can create `.vimrc.fork`
+fork of magic-vim specialized for a particular group. These users can create `.vimrc.fork`
 and `.vimrc.bundles.fork` files in the root of their fork.  The load order for the configuration is:
 
-1. `.vimrc.before` - spf13-vim before configuration
+1. `.vimrc.before` - magic-vim before configuration
 2. `.vimrc.before.fork` - fork before configuration
 3. `.vimrc.before.local` - before user configuration
-4. `.vimrc.bundles` - spf13-vim bundle configuration
+4. `.vimrc.bundles` - magic-vim bundle configuration
 5. `.vimrc.bundles.fork` - fork bundle configuration
 6. `.vimrc.bundles.local` - local user bundle configuration
-6. `.vimrc` - spf13-vim vim configuration
+6. `.vimrc` - magic-vim vim configuration
 7. `.vimrc.fork` - fork vim configuration
 8. `.vimrc.local` - local user configuration
 
@@ -195,14 +119,14 @@ needs to be set in your `.vimrc.bundles.fork` file.
 You can specify the default bundles for your fork using `.vimrc.before.fork` file. Here is how to create an example `.vimrc.before.fork` file
 in a fork repo for the default bundles.
 ```bash
-    echo let g:spf13_bundle_groups=[\'general\', \'programming\', \'misc\', \'youcompleteme\'] >> .vimrc.before.fork
+    echo let g:magic_bundle_groups=[\'general\', \'programming\', \'misc\', \'youcompleteme\'] >> .vimrc.before.fork
 ```
 Once you have this file in your repo, only the bundles you specified will be installed during the first installation of your fork.
 
 You may also want to update your `README.markdown` file so that the `bootstrap.sh` link points to your repository and your `bootstrap.sh`
 file to pull down your fork.
 
-For an example of a fork of spf13-vim that provides customization in this manner see [taxilian's fork](https://github.com/taxilian/spf13-vim).
+For an example of a fork of magic-vim that provides customization in this manner see [taxilian's fork](https://github.com/taxilian/magic-vim).
 
 ### Easily Editing Your Configuration
 
@@ -213,22 +137,22 @@ configuration and make customizations.
 
 These two mappings can themselves be customized by setting the following in .vimrc.before.local:
 ```bash
-let g:spf13_edit_config_mapping='<Leader>ev'
-let g:spf13_apply_config_mapping='<Leader>sv'
+let g:magic_edit_config_mapping='<Leader>ev'
+let g:magic_apply_config_mapping='<Leader>sv'
 ```
 
 # Plugins
 
-spf13-vim contains a curated set of popular vim plugins, colors, snippets and syntaxes. Great care has been made to ensure that these plugins play well together and have optimal configuration.
+magic-vim contains a curated set of popular vim plugins, colors, snippets and syntaxes. Great care has been made to ensure that these plugins play well together and have optimal configuration.
 
 ## Adding new plugins
 
 Create `~/.vimrc.bundles.local` for any additional bundles.
 
-To add a new bundle, just add one line for each bundle you want to install. The line should start with the word "Bundle" followed by a string of either the vim.org project name or the githubusername/githubprojectname. For example, the github project [spf13/vim-colors](https://github.com/spf13/vim-colors) can be added with the following command
+To add a new bundle, just add one line for each bundle you want to install. The line should start with the word "Bundle" followed by a string of either the vim.org project name or the githubusername/githubprojectname. For example, the github project [magic/vim-colors](https://github.com/magic/vim-colors) can be added with the following command
 
 ```bash
-    echo Bundle \'spf13/vim-colors\' >> ~/.vimrc.bundles.local
+    echo Bundle \'magic/vim-colors\' >> ~/.vimrc.bundles.local
 ```
 
 Once new plugins are added, they have to be installed.
@@ -311,7 +235,7 @@ There's a lot more, check it out at `:help surround`
 ## [NERDCommenter]
 
 NERDCommenter allows you to wrangle your code comments, regardless of
-filetype. View `help :NERDCommenter` or checkout my post on [NERDCommenter](http://spf13.com/post/vim-plugins-nerd-commenter).
+filetype. View `help :NERDCommenter` or checkout my post on [NERDCommenter](http://magic.com/post/vim-plugins-nerd-commenter).
 
 **QuickStart** Toggle comments using `<Leader>c<space>` in Visual or Normal mode.
 
@@ -333,11 +257,11 @@ Neocomplete is an amazing autocomplete plugin with additional support for snippe
 
 YouCompleteMe is another amazing completion engine. It is slightly more involved to set up as it contains a binary component that the user needs to compile before it will work. As a result of this however it is very fast.
 
-To enable YouCompleteMe add `youcompleteme` to your list of groups by overriding it in your `.vimrc.before.local` like so: `let g:spf13_bundle_groups=['general', 'programming', 'misc', 'scala', 'youcompleteme']` This is just an example. Remember to choose the other groups you want here.
+To enable YouCompleteMe add `youcompleteme` to your list of groups by overriding it in your `.vimrc.before.local` like so: `let g:magic_bundle_groups=['general', 'programming', 'misc', 'scala', 'youcompleteme']` This is just an example. Remember to choose the other groups you want here.
 
 Once you have done this you will need to get Vundle to grab the latest code from git. You can do this by calling `:BundleInstall!`. You should see YouCompleteMe in the list.
 
-You will now have the code in your bundles directory and can proceed to compile the core. Change to the directory it has been downloaded to. If you have a vanilla install then `cd ~/.spf13-vim-3/.vim/bundle/YouCompleteMe/` should do the trick. You should see a file in this directory called install.sh. There are a few options to consider before running the installer:
+You will now have the code in your bundles directory and can proceed to compile the core. Change to the directory it has been downloaded to. If you have a vanilla install then `cd ~/.magic-vim-3/.vim/bundle/YouCompleteMe/` should do the trick. You should see a file in this directory called install.sh. There are a few options to consider before running the installer:
 
   * Do you want clang support (if you don't know what this is then you likely don't need it)?
     * Do you want to link against a local libclang or have the installer download the latest for you?
@@ -422,11 +346,11 @@ Tabularize lets you align statements on their equal signs and other characters
 
 ## [Tagbar]
 
-spf13-vim includes the Tagbar plugin. This plugin requires exuberant-ctags and will automatically generate tags for your open files. It also provides a panel to navigate easily via tags
+magic-vim includes the Tagbar plugin. This plugin requires exuberant-ctags and will automatically generate tags for your open files. It also provides a panel to navigate easily via tags
 
 **QuickStart** `CTRL-]` while the cursor is on a keyword (such as a function name) to jump to its definition.
 
-**Customizations**: spf13-vim binds `<Leader>tt` to toggle the tagbar panel
+**Customizations**: magic-vim binds `<Leader>tt` to toggle the tagbar panel
 
 ![tagbar image][tagbar-img]
 
@@ -461,7 +385,7 @@ To enable powerline symbols first install one of the [Powerline Fonts] or patch 
 
 ## Additional Syntaxes
 
-spf13-vim ships with a few additional syntaxes:
+magic-vim ships with a few additional syntaxes:
 
 * Markdown (bound to \*.markdown, \*.md, and \*.mk)
 * Twig
@@ -469,7 +393,7 @@ spf13-vim ships with a few additional syntaxes:
 
 ## Amazing Colors
 
-spf13-vim includes [solarized] and [spf13 vim color pack](https://github.com/spf13/vim-colors/):
+magic-vim includes [solarized] and [magic vim color pack](https://github.com/magic/vim-colors/):
 
 * ir_black
 * molokai
@@ -490,7 +414,7 @@ Terminal emulator colorschemes:
 
 ## Snippets
 
-It also contains a very complete set of [snippets](https://github.com/spf13/snipmate-snippets) for use with snipmate or [neocomplete].
+It also contains a very complete set of [snippets](https://github.com/magic/snipmate-snippets) for use with snipmate or [neocomplete].
 
 
 # Intro to VIM
@@ -515,12 +439,9 @@ Here's some tips if you've never used VIM before:
 
 * Use `:q` to exit vim
 * Certain commands are prefixed with a `<Leader>` key, which by default maps to `\`.
-  Spf13-vim uses `let mapleader = ","` to change this to `,` which is in a consistent and
+  magic-vim uses `let mapleader = ","` to change this to `,` which is in a consistent and
   convenient location.
 * Keyboard [cheat sheet](http://www.viemu.com/vi-vim-cheat-sheet.gif).
-
-[![Analytics](https://ga-beacon.appspot.com/UA-7131036-5/spf13-vim/readme)](https://github.com/igrigorik/ga-beacon)
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/spf13/spf13-vim/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 
 [Git]:http://git-scm.com
@@ -528,13 +449,13 @@ Here's some tips if you've never used VIM before:
 [Vim]:http://www.vim.org/download.php#pc
 [msysgit]:http://msysgit.github.io
 [Chocolatey]: http://chocolatey.org/
-[spf13-vim package]: https://chocolatey.org/packages/spf13-vim
+[magic-vim package]: https://chocolatey.org/packages/magic-vim
 [MacVim]:http://code.google.com/p/macvim/
-[spf13-vim]:https://github.com/spf13/spf13-vim
-[contributors]:https://github.com/spf13/spf13-vim/contributors
+[magic-vim]:https://github.com/magic/magic-vim
+[contributors]:https://github.com/magic/magic-vim/contributors
 
 [Vundle]:https://github.com/gmarik/vundle
-[PIV]:https://github.com/spf13/PIV
+[PIV]:https://github.com/magic/PIV
 [NERDCommenter]:https://github.com/scrooloose/nerdcommenter
 [Undotree]:https://github.com/mbbill/undotree
 [NERDTree]:https://github.com/scrooloose/nerdtree
@@ -553,11 +474,9 @@ Here's some tips if you've never used VIM before:
 [Airline]:https://github.com/bling/vim-airline
 [Powerline]:https://github.com/lokaltog/powerline
 [Powerline Fonts]:https://github.com/Lokaltog/powerline-fonts
-[AutoClose]:https://github.com/spf13/vim-autoclose
+[AutoClose]:https://github.com/magic/vim-autoclose
 [Ack.vim]:https://github.com/mileszs/ack.vim
 
-[spf13-vim-img]:https://i.imgur.com/UKToY.png
-[spf13-vimrc-img]:https://i.imgur.com/kZWj1.png
 [autocomplete-img]:https://i.imgur.com/90Gg7.png
 [tagbar-img]:https://i.imgur.com/cjbrC.png
 [fugitive-img]:https://i.imgur.com/4NrxV.png
