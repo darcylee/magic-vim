@@ -168,6 +168,10 @@
                 \ ]
         endif
     " }
+    "当打开vim且没有文件时自动打开NERDTree
+    autocmd vimenter * if !argc() | NERDTree | endif
+    " 只剩 NERDTree时自动关闭
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " }
 
@@ -465,7 +469,7 @@
     noremap <C-Right> <C-W>l
 
     " 设置快捷键将选中文本块复制至系统剪贴板
-    vnoremap <Leader>y "+y
+    nmap <Leader>y "+y
     vnoremap <C-c> "+y
     " 设置快捷键将系统剪贴板内容粘贴至vim
     nmap <Leader>p "+p
