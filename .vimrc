@@ -455,8 +455,8 @@
     map <silent> <F11> :call system("wmctrl -ir " . v:windowid . " -b toggle,fullscreen")<CR>
 
     " Define by rucle
-    noremap <leader>bf   :bn<CR>
-    noremap <leader>bb   :bp<CR>
+    noremap <leader>bn   :bn<CR>
+    noremap <leader>bp   :bp<CR>
 
     noremap <C-J>     <C-W>j
     noremap <C-K>     <C-W>k
@@ -594,7 +594,7 @@
     " SnipMate {
         " Setting the author var
         " If forking, please overwrite in your .vimrc.local file
-        let g:snips_author = 'Steve Francia <steve.francia@gmail.com>'
+        let g:snips_author = 'darcylee <darcylee1986@gmail.com>'
     " }
 
     " NerdTree {
