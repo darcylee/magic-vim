@@ -91,7 +91,7 @@
 
     filetype plugin indent on   " Automatically detect file types.
     syntax on                   " Syntax highlighting
-    set mouse=a                 " Automatically enable mouse usage
+    set mouse=nv                " Automatically enable mouse in normal & virtua mode
     set mousehide               " Hide the mouse cursor while typing
     set selection=exclusive
     set selectmode=key
