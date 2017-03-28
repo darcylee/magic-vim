@@ -168,10 +168,6 @@
                 \ ]
         endif
     " }
-    "当打开vim且没有文件时自动打开NERDTree
-    autocmd vimenter * if !argc() | NERDTree | endif
-    " 只剩 NERDTree时自动关闭
-    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 " }
 
@@ -613,6 +609,10 @@
             let NERDTreeMinimaUI=1
             let NERDTreeAutoDeleteBuffer=1
             let g:nerdtree_tabs_open_on_gui_startup=0
+             "当打开vim且没有文件时自动打开NERDTree
+            autocmd vimenter * if !argc() | NERDTree | endif
+            " 只剩 NERDTree时自动关闭
+            autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
         endif
     " }
 
