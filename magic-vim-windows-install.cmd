@@ -18,7 +18,7 @@ REM    limitations under the License.
 
 @set APP_PATH=%HOME%\.magic-vim-3
 IF NOT EXIST "%APP_PATH%" (
-    call git clone -b master https://github.com/darcylee/magic-vim.git "%APP_PATH%"
+    call git clone -b light https://github.com/darcylee/magic-vim.git "%APP_PATH%"
 ) ELSE (
     @set ORIGINAL_DIR=%CD%
     echo updating magic-vim

@@ -33,7 +33,7 @@ REM    limitations under the License.
     chdir /d "%ORIGINAL_DIR%"
 ) else (
     echo cloning magic-vim
-    call git clone -b 3.0 git://github.com/darcylee/magic-vim.git "%APP_PATH%"
+    call git clone -b light git://github.com/darcylee/magic-vim.git "%APP_PATH%"
 )
 
 @if not exist  "%APP_PATH%\.vim\bundle" call mkdir "%APP_PATH%\.vim\bundle"
