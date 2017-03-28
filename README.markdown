@@ -18,19 +18,19 @@ To make all the plugins work, specifically [neocomplete](https://github.com/Shou
 
 ## Linux, \*nix, Mac OSX Installation
 
-The easiest way to install magic-vim is to use our [automatic installer](https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install magic-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
+The easiest way to install magic-vim is to use our [automatic installer](https://raw.githubusercontent.com/darcylee/magic-vim/light/bootstrap.sh) by simply copying and pasting the following line into a terminal. This will install magic-vim and backup your existing vim configuration. If you are upgrading from a prior version (before 3.0) this is also the recommended installation.
 
 *Requires Git 1.7+ and Vim 7.3+*
 
 ```bash
 
-    curl https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh -L > magic-vim.sh && sh magic-vim.sh
+    curl https://raw.githubusercontent.com/darcylee/magic-vim/light/bootstrap.sh -L > magic-vim.sh && sh magic-vim.sh
 ```
 
 If you have a bash-compatible shell you can run the script directly:
 ```bash
 
-    sh <(curl https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh -L)
+    sh <(curl https://raw.githubusercontent.com/darcylee/magic-vim/light/bootstrap.sh -L)
 ```
 
 ## Installing on Windows
@@ -42,7 +42,7 @@ The simpliest (and safest) way to update is to simply rerun the installer. It wi
 
 ```bash
 
-    curl https://raw.githubusercontent.com/darcylee/magic-vim/master/bootstrap.sh -L -o - | sh
+    curl https://raw.githubusercontent.com/darcylee/magic-vim/light/bootstrap.sh -L -o - | sh
 
 ```
 
