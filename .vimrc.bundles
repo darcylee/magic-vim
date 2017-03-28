@@ -82,7 +82,7 @@
     " In your .vimrc.before.local file
     " list only the plugin groups you will use
     if !exists('g:magic_bundle_groups')
-        let g:magic_bundle_groups=['general', 'writing', 'neocomplete', 'ruby', 'python', 'javascript', 'html', 'misc','go',]
+        let g:magic_bundle_groups=['general', 'writing', 'programming', 'neocomplete', 'ruby', 'python', 'javascript', 'html', 'misc','go',]
     endif
 
     " To override all the included bundles, add the following to your
@@ -144,7 +144,7 @@
         if count(g:magic_bundle_groups, 'programming')
             " Pick one of the checksyntax, jslint, or syntastic
             Bundle 'scrooloose/syntastic'
-            Bundle 'tpope/vim-fugitive'
+            "Bundle 'tpope/vim-fugitive'
             Bundle 'mattn/webapi-vim'
             Bundle 'mattn/gist-vim'
             Bundle 'scrooloose/nerdcommenter'
