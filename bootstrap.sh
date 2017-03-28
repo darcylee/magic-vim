@@ -18,7 +18,7 @@
 app_name='magic-vim'
 [ -z "$APP_PATH" ] && APP_PATH="$HOME/.magic-vim"
 [ -z "$REPO_URI" ] && REPO_URI='https://github.com/darcylee/magic-vim.git'
-[ -z "$REPO_BRANCH" ] && REPO_BRANCH='master'
+[ -z "$REPO_BRANCH" ] && REPO_BRANCH='light'
 debug_mode='0'
 fork_maintainer='0'
 [ -z "$VUNDLE_URI" ] && VUNDLE_URI="https://github.com/gmarik/vundle.git"
